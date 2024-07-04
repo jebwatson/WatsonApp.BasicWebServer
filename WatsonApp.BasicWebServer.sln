@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WatsonApp.BasicWebServer.Console", "WatsonApp.BasicWebServer.Console\WatsonApp.BasicWebServer.Console.csproj", "{D0B5E000-50FF-4481-B847-FD0CE6575A2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatsonApp.BasicWebServer.WebServer", "WatsonApp.BasicWebServer.WebServer\WatsonApp.BasicWebServer.WebServer.csproj", "{D80F2C39-CBC7-404C-A528-012472D343BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D0B5E000-50FF-4481-B847-FD0CE6575A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0B5E000-50FF-4481-B847-FD0CE6575A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0B5E000-50FF-4481-B847-FD0CE6575A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D80F2C39-CBC7-404C-A528-012472D343BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80F2C39-CBC7-404C-A528-012472D343BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80F2C39-CBC7-404C-A528-012472D343BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80F2C39-CBC7-404C-A528-012472D343BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
