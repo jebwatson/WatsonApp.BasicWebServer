@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -7,14 +6,14 @@ namespace WatsonApp.BasicWebServer.WebServer;
 
 public static class Server
 {
-    private static HttpListener listener;
-    private static int maxSimultaneousConnections = 20;
-    private static Semaphore semaphore = new Semaphore(maxSimultaneousConnections, maxSimultaneousConnections);
+    private static HttpListener? listener;
+    private static readonly int maxSimultaneousConnections = 20;
+    private static readonly Semaphore semaphore = new Semaphore(maxSimultaneousConnections, maxSimultaneousConnections);
 
     public static void Start()
     {
         List<IPAddress> localHostIPs = GetLocalHostIPs();
-        HttpListener listener = InitializeListener(localHostIPs);
+        listener = InitializeListener(localHostIPs);
         Start(listener);
     }
 
