@@ -62,11 +62,18 @@ public static class Server
     {
         HttpListenerContext context = await listener.GetContextAsync();
         semaphore.Release();
+        Log(context.Request);
 
-        string response = "Hello Browser!";
+        string response = "<html><head><meta http-equiv='content-type' content='text/html; charset=utf-8'/></head>Hello Browser!</html>";
         byte[] encoded = Encoding.UTF8.GetBytes(response);
         context.Response.ContentLength64 = encoded.Length;
         context.Response.OutputStream.Write(encoded, 0, encoded.Length);
         context.Response.OutputStream.Close();
+    }
+
+    public static void Log(HttpListenerRequest request)
+    {
+        string message = new StringBuilder().AppendJoin("", request.RemoteEndPoint, " ", request.HttpMethod, " /", request.Url.AbsoluteUri).ToString();
+        Console.WriteLine(message);
     }
 }
